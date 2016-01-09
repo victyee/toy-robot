@@ -24,20 +24,17 @@ Other valid commands
 `TEST1` will enter the following commands
 - `PLACE 0,0,NORTH`
 - `MOVE`
-- `REPORT`
-- and returns `Output: 0,1,NORTH`
- 
-`TEST2` will enter the following commands and return the output
+- `REPORT` which returns `Output: 0,1,NORTH`
+
+`TEST2` will enter the following commands
 - `PLACE 0,0,NORTH`
 - `LEFT`
-- `REPORT`
-- and returns `Output: 0,0,WEST`
+- `REPORT` which returns `Output: 0,0,WEST`
 
-`TEST3` will enter the following commands and return the output
+`TEST3` will enter the following commands
 - `PLACE 1,2,EAST`
 - `MOVE`
 - `MOVE`
 - `LEFT`
 - `MOVE`
-- `REPORT`
-- and returns `Output: 3,3,NORTH`
+- `REPORT` which repturns `Output: 3,3,NORTH`
