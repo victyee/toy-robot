@@ -37,4 +37,4 @@ Other valid commands
 - `MOVE`
 - `LEFT`
 - `MOVE`
-- `REPORT` which repturns `Output: 3,3,NORTH`
+- `REPORT` which returns `Output: 3,3,NORTH`
