@@ -3,4 +3,5 @@ def robot(x, y, f)
 	@robot_x_axis = x
 	@robot_y_axis = y
 	@robot_facing = f
+	prompt_command
 end
