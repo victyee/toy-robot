@@ -10,8 +10,8 @@ This is a toy robot simulator. It moves on a 5X5 dimension table top
 Start by placing the toy robot on the table top
     `PLACE X,Y,F`
 
-- X and Y can be numbers from `0` to `4`
-- F can be either `NORTH`, `SOUTH`, `EAST`, `WEST`
+- `X` and `Y` can be numbers from `0` to `4`
+- `F` can be either `NORTH`, `SOUTH`, `EAST`, `WEST`
 - Example `PLACE 0,0,NORTH`
 
 Other valid commands
