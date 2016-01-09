@@ -168,7 +168,7 @@ end
 
 # Verifies if Position is valid
 def valid_f
-	if @robotPosition.include? @command_split[3]
+	if @robot_positions.include? @command_split[3]
 		return true
 	else
 		puts "ERROR: Please enter a valid position"
