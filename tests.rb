@@ -1,6 +1,6 @@
 # TEST1 command
 def test1
-	@testMode = true
+	@test_mode = true
 	@command = "PLACE 0,0,NORTH"
 	puts "Input command > #{@command}"
 	check_command
@@ -13,13 +13,13 @@ def test1
 	puts "Input command > #{@command}"
 	check_command
 
-	@testMode = false
+	@test_mode = false
 end
 
 
 # TEST2 command
 def test2
-	@testMode = true
+	@test_mode = true
 
 	@command = "PLACE 0,0,NORTH"
 	puts "Input command > #{@command}"
@@ -33,13 +33,13 @@ def test2
 	puts "Input command > #{@command}"
 	check_command
 
-	@testMode = false
+	@test_mode = false
 end
 
 
 # TEST3 command
 def test3
-	@testMode = true
+	@test_mode = true
 
 	@command = "PLACE 1,2,EAST"
 	puts "Input command > #{@command}"
@@ -65,6 +65,6 @@ def test3
 	puts "Input command > #{@command}"
 	check_command
 
-	@testMode = false
+	@test_mode = false
 end
 

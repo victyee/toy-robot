@@ -12,7 +12,7 @@ def check_command
 	end
 
 	# Makes sure a robot is placed first before accepting other commands
-	if @hasRobot == false && @command_split[0] !="PLACE"
+	if @has_robot == false && @command_split[0] !="PLACE"
 		puts "You need to place the robot first!"
 		prompt_command
 	end
@@ -98,8 +98,8 @@ end
 
 # PLACE command
 def place
-	if validX && validY && validF
-		@hasRobot = true
+	if valid_x && valid_y && valid_f
+		@has_robot = true
 		robot(@command_split[1], @command_split[2], @command_split[3])
 	else
 		prompt_command
@@ -116,27 +116,27 @@ end
 
 # Initiates user's input
 def prompt_command
-	if @hasRobot == true
-  	print "Input command > "
-  else
-  	print "Place your robot > "
-  end
-  @command = $stdin.gets.chomp
-  check_command
+	if @has_robot == true
+		print "Input command > "
+	else
+		print "Place your robot > "
+	end
+	@command = $stdin.gets.chomp
+	check_command
 end
 
 
 # Checks if entered X and Y axis are numbers
 def is_numeric?(obj) 
-  obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+	obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
 end
 
 
 # Verify if X axis is valid
-def validX
+def valid_x
 	axis = @command_split[1]
 	if is_numeric?(axis)
-		if axis.to_i < 0 || axis.to_i > @maxX
+		if axis.to_i < 0 || axis.to_i > @max_x
 			puts "X axis is out of range! "
 			return false
 		else
@@ -150,10 +150,10 @@ end
 
 
 # Verifies if Y axis is valid
-def validY
+def valid_y
 	axis = @command_split[2]
 	if is_numeric?(axis)
-		if axis.to_i < 0 || axis.to_i > @maxY
+		if axis.to_i < 0 || axis.to_i > @max_y
 			puts "Y axis is out of range! "
 			return false
 		else
@@ -167,7 +167,7 @@ end
 
 
 # Verifies if Position is valid
-def validF
+def valid_f
 	if @robotPosition.include? @command_split[3]
 		return true
 	else
@@ -179,7 +179,7 @@ end
 
 # Checks if in testmode
 def check_testmode
-	if @testMode == false
+	if @test_mode == false
 		prompt_command
 	end
 end

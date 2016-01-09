@@ -4,11 +4,11 @@ require_relative 'robot.rb'
 
 
 # Initial settings
-@testMode = false
-@hasRobot = false
-@robotPosition = ['NORTH', 'SOUTH', 'EAST', 'WEST']
-@maxX = 4
-@maxY = 4
+@test_mode = false
+@has_robot = false
+@robot_positions = ['NORTH', 'SOUTH', 'EAST', 'WEST']
+@max_x = 4
+@max_y= 4
 
 
 # Initiates the robot simulator
