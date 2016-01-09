@@ -137,7 +137,7 @@ def validX
 	axis = @command_split[1]
 	if is_numeric?(axis)
 		if axis.to_i < 0 || axis.to_i > @maxX
-			print "X axis is out of range! "
+			puts "X axis is out of range! "
 			return false
 		else
 			return true
@@ -154,7 +154,7 @@ def validY
 	axis = @command_split[2]
 	if is_numeric?(axis)
 		if axis.to_i < 0 || axis.to_i > @maxY
-			print "Y axis is out of range! "
+			puts "Y axis is out of range! "
 			return false
 		else
 			return true
