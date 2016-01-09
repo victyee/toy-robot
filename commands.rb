@@ -1,6 +1,15 @@
-# To verify if command input is valid
+# Verifies if command input is valid
 def check_command
 	@command_split = @command.split(/\W+/)
+
+	# Checks if command is a test
+	if @command_split[0] == "TEST1"
+		test1
+	elsif @command_split[0] == "TEST2"
+		test2
+	elsif @command_split[0] == "TEST3"
+		test3
+	end
 
 	# Makes sure a robot is placed first before accepting other commands
 	if @hasRobot == false && @command_split[0] !="PLACE"
@@ -53,7 +62,7 @@ def move
 			puts "Can't move. Will drop off the table"
 		end
 	end
-	prompt_command
+	check_testmode
 end
 
 
@@ -68,7 +77,7 @@ def left
 	elsif @robot_facing == "WEST"
 		@robot_facing = "SOUTH"
 	end
-	prompt_command
+	check_testmode
 end
 
 
@@ -83,7 +92,7 @@ def right
 	elsif @robot_facing == "WEST"
 		@robot_facing = "NORTH"
 	end
-	prompt_command
+	check_testmode
 end
 
 
@@ -98,11 +107,12 @@ def place
 end
 
 
-#  REPORT command
+# REPORT command
 def report
 	puts "Output: #{@robot_x_axis},#{@robot_y_axis},#{@robot_facing}"
 	prompt_command
 end
+
 
 # Initiates user's input
 def prompt_command
@@ -139,7 +149,7 @@ def validX
 end
 
 
-# Verify if Y axis is valid
+# Verifies if Y axis is valid
 def validY
 	axis = @command_split[2]
 	if is_numeric?(axis)
@@ -156,7 +166,7 @@ def validY
 end
 
 
-# Verify if Position is valid
+# Verifies if Position is valid
 def validF
 	if @robotPosition.include? @command_split[3]
 		return true
@@ -167,3 +177,9 @@ def validF
 end
 
 
+# Checks if in testmode
+def check_testmode
+	if @testMode == false
+		prompt_command
+	end
+end
