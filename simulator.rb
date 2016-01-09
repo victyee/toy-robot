@@ -8,7 +8,7 @@ require_relative 'robot.rb'
 @has_robot = false
 @robot_positions = ['NORTH', 'SOUTH', 'EAST', 'WEST']
 @max_x = 4
-@max_y= 4
+@max_y = 4
 
 
 # Initiates the robot simulator
