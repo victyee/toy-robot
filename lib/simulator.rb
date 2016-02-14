@@ -1,8 +1,6 @@
 require_relative 'robot'
 
 class Simulator
-  attr_reader :simulator
-
   def initialize
     @has_robot = false
     @max_x = 4

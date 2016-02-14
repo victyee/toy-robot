@@ -1,14 +1,9 @@
 class Robot
-  attr_reader :place
-
   def initialize(x,y,f)
     @has_robot = true
-
     @x_axis = x.to_i
     @y_axis = y.to_i
     @f_facing = f
-
-    @robot_positions = ['NORTH', 'SOUTH', 'EAST', 'WEST']
   end
 
   # REPORT command
