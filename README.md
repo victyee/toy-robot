@@ -17,7 +17,7 @@ Start by placing the toy robot on the table top
 
 Other valid commands
 - `MOVE` will move the robot forward one unit in the direction it is currently facing
-- `LEFT` rotates the robot 90 degress to the left. Robot's position doesn't change.
+- `LEFT` rotates the robot 90 degrees to the left. Robot's position doesn't change.
 - `RIGHT` rotates the robot 90 degrees to the right. Robot's position doesn't change.
 - `REPORT` return `X,Y,F` of the robot. E.g. `Output: 1,1,SOUTH`
 

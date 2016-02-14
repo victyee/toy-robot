@@ -103,7 +103,3 @@ class Simulator
     end
   end
 end
-
-
-@session = Simulator.new
-@session.prompt_command
