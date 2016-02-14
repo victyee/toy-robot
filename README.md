@@ -11,7 +11,7 @@ Start by placing the toy robot on the table top
     `PLACE X,Y,F`
 
 - `X` and `Y` can be numbers from `0` to `4`
-- `F` can be either `NORTH`, `SOUTH`, `EAST`, `WEST`
+- `F` can be either `NORTH`, `SOUTH`, `EAST` or `WEST`
 - Example `PLACE 0,0,NORTH`
 
 Other valid commands

@@ -11,10 +11,6 @@ class Robot
     @robot_positions = ['NORTH', 'SOUTH', 'EAST', 'WEST']
   end
 
-  def position
-    return "Output: #{@x_axis},#{@y_axis},#{@f_facing}"
-  end
-
   # REPORT command
   def report
     puts "Output: #{@x_axis},#{@y_axis},#{@f_facing}"

@@ -4,38 +4,38 @@ RSpec.describe Robot, "test commands" do
   context "creates new robot" do
     it "1,2,NORTH" do
       robot = Robot.new(1,2,'NORTH')
-      expect(robot.position).to eq "Output: 1,2,NORTH"
+      expect { robot.report }.to output("Output: 1,2,NORTH\n").to_stdout
     end
     it "4,4,NORTH" do
       robot = Robot.new(4,4,'NORTH')
-      expect(robot.position).to eq "Output: 4,4,NORTH"
+      expect { robot.report }.to output("Output: 4,4,NORTH\n").to_stdout
     end
 
     it "2,2,SOUTH" do
       robot = Robot.new(2,2,'SOUTH')
-      expect(robot.position).to eq "Output: 2,2,SOUTH"
+      expect { robot.report }.to output("Output: 2,2,SOUTH\n").to_stdout
     end
     it "4,4,SOUTH" do
       robot = Robot.new(4,4,'SOUTH')
-      expect(robot.position).to eq "Output: 4,4,SOUTH"
+      expect { robot.report }.to output("Output: 4,4,SOUTH\n").to_stdout
     end
 
     it "3,0,EAST" do
       robot = Robot.new(3,0,'EAST')
-      expect(robot.position).to eq "Output: 3,0,EAST"
+      expect { robot.report }.to output("Output: 3,0,EAST\n").to_stdout
     end
     it "4,2,EAST" do
       robot = Robot.new(4,2,'EAST')
-      expect(robot.position).to eq "Output: 4,2,EAST"
+      expect { robot.report }.to output("Output: 4,2,EAST\n").to_stdout
     end   
 
     it "1,4,WEST" do
       robot = Robot.new(1,4,'WEST')
-      expect(robot.position).to eq "Output: 1,4,WEST"
+      expect { robot.report }.to output("Output: 1,4,WEST\n").to_stdout
     end
     it "3,3,WEST" do
       robot = Robot.new(3,3,'WEST')
-      expect(robot.position).to eq "Output: 3,3,WEST"
+      expect { robot.report }.to output("Output: 3,3,WEST\n").to_stdout
     end
   end
 
@@ -60,13 +60,13 @@ RSpec.describe Robot, "test commands" do
     it "PLACE 2,3,EAST, MOVE" do
       robot = Robot.new(2,3,'EAST')
       robot.move
-      expect(robot.position).to eq "Output: 3,3,EAST"
+      expect { robot.report }.to output("Output: 3,3,EAST\n").to_stdout
     end
 
     it "PLACE 2,4,WEST, MOVE" do
       robot = Robot.new(2,4,'WEST')
       robot.move
-      expect(robot.position).to eq "Output: 1,4,WEST"
+      expect { robot.report }.to output("Output: 1,4,WEST\n").to_stdout
     end
   end
 
@@ -86,13 +86,13 @@ RSpec.describe Robot, "test commands" do
     it "PLACE 0,0,NORTH, LEFT" do
       robot = Robot.new(0,0,'NORTH')
       robot.left
-      expect(robot.position).to eq "Output: 0,0,WEST"
+      expect { robot.report }.to output("Output: 0,0,WEST\n").to_stdout
     end
 
     it "PLACE 1,1,SOUTH, LEFT" do
       robot = Robot.new(1,1,'SOUTH')
       robot.left
-      expect(robot.position).to eq "Output: 1,1,EAST"
+      expect { robot.report }.to output("Output: 1,1,EAST\n").to_stdout
     end
   end
 
@@ -100,13 +100,13 @@ RSpec.describe Robot, "test commands" do
     it "PLACE 0,0,NORTH, RIGHT" do
       robot = Robot.new(0,0,'NORTH')
       robot.right
-      expect(robot.position).to eq "Output: 0,0,EAST"
+      expect { robot.report }.to output("Output: 0,0,EAST\n").to_stdout
     end
 
     it "PLACE 1,1,SOUTH, RIGHT" do
       robot = Robot.new(1,1,'SOUTH')
       robot.right
-      expect(robot.position).to eq "Output: 1,1,WEST"
+      expect { robot.report }.to output("Output: 1,1,WEST\n").to_stdout
     end
   end
 
@@ -114,15 +114,15 @@ RSpec.describe Robot, "test commands" do
     it "PLACE 0,0,NORTH, MOVE, REPORT" do
       robot = Robot.new(0,0,'NORTH')
       robot.move
-      robot.position
-      expect(robot.position).to eq "Output: 0,1,NORTH"
+      robot.report
+      expect { robot.report }.to output("Output: 0,1,NORTH\n").to_stdout
     end
 
     it "PLACE 0,0,NORTH, LEFT, REPORT" do
       robot = Robot.new(0,0,'NORTH')
       robot.left
-      robot.position
-      expect(robot.position).to eq "Output: 0,0,WEST"
+      robot.report
+      expect { robot.report }.to output("Output: 0,0,WEST\n").to_stdout
     end
 
     it "PLACE 1,2,EAST, MOVE, MOVE, LEFT, MOVE, REPORT" do
@@ -131,8 +131,8 @@ RSpec.describe Robot, "test commands" do
       robot.move
       robot.left
       robot.move
-      robot.position
-      expect(robot.position).to eq "Output: 3,3,NORTH"
+      robot.report
+      expect { robot.report }.to output("Output: 3,3,NORTH\n").to_stdout
     end
   end
 end
