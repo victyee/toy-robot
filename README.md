@@ -2,9 +2,9 @@
 This is a toy robot simulator. It moves on a 5X5 dimension table top
 
 ## Installation
-    git clone https://github.com/victyee/toy-robot.git
-    cd toy-robot
-    ruby simulator.rb
+    $ git clone https://github.com/victyee/toy-robot.git
+    $ cd toy-robot
+    $ ruby simulator.rb
     
 ## Commands
 Start by placing the toy robot on the table top
@@ -20,21 +20,8 @@ Other valid commands
 - `RIGHT` rotates the robot 90 degrees to the right. Robot's position doesn't change.
 - `REPORT` return `X,Y,F` of the robot. E.g. `Output: 1,1,SOUTH`
 
-## Tests
-`TEST1` will enter the following commands
-- `PLACE 0,0,NORTH`
-- `MOVE`
-- `REPORT` which returns `Output: 0,1,NORTH`
+## Testing
+Code quality is attempted using [RSpec](http://rspec.info/) for testing
 
-`TEST2` will enter the following commands
-- `PLACE 0,0,NORTH`
-- `LEFT`
-- `REPORT` which returns `Output: 0,0,WEST`
-
-`TEST3` will enter the following commands
-- `PLACE 1,2,EAST`
-- `MOVE`
-- `MOVE`
-- `LEFT`
-- `MOVE`
-- `REPORT` which returns `Output: 3,3,NORTH`
+Run tests:
+`$ rspec spec`
