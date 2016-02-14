@@ -25,4 +25,4 @@ Other valid commands
 Code quality is attempted using [RSpec](http://rspec.info/) for testing
 
 Run tests:
-`$ rspec spec`
+`$ rspec`
