@@ -4,7 +4,8 @@ This is a toy robot simulator. It moves on a 5X5 dimension table top
 ## Installation
     $ git clone https://github.com/victyee/toy-robot.git
     $ cd toy-robot
-    $ ruby simulator.rb
+    $ bundle install
+    $ ruby toy-robot.rb
     
 ## Commands
 Start by placing the toy robot on the table top

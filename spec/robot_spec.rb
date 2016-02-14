@@ -1,4 +1,4 @@
-require_relative '../robot'
+require_relative '../lib/robot'
 
 RSpec.describe Robot, "test commands" do
   context "creates new robot" do
@@ -114,14 +114,12 @@ RSpec.describe Robot, "test commands" do
     it "PLACE 0,0,NORTH, MOVE, REPORT" do
       robot = Robot.new(0,0,'NORTH')
       robot.move
-      robot.report
       expect { robot.report }.to output("Output: 0,1,NORTH\n").to_stdout
     end
 
     it "PLACE 0,0,NORTH, LEFT, REPORT" do
       robot = Robot.new(0,0,'NORTH')
       robot.left
-      robot.report
       expect { robot.report }.to output("Output: 0,0,WEST\n").to_stdout
     end
 
@@ -131,7 +129,6 @@ RSpec.describe Robot, "test commands" do
       robot.move
       robot.left
       robot.move
-      robot.report
       expect { robot.report }.to output("Output: 3,3,NORTH\n").to_stdout
     end
   end
