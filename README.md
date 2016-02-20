@@ -1,13 +1,28 @@
 # Toyrobot
 This is a toy robot simulator. It moves on a 5X5 dimension table top
 
+## Environments
+### Dependancies
+`ruby version ~> 2.1.0p0`
+
+To check your version run:
+`$ ruby -v`
+
+To learn how to install ruby visit ruby-lang.org/en/installation/
+
+### Development environment
+- Windows 8.1, ruby 2.2.4p230
+
+### Development dependancies
+`rspec ~> 3.0`
+
 ## Installation
     $ git clone https://github.com/victyee/toy-robot.git
     $ cd toy-robot
     $ bundle install
     $ ruby toy-robot.rb
     
-## Commands
+## Simulation Commands
 Start by placing the toy robot on the table top
     `PLACE X,Y,F`
 
@@ -20,7 +35,6 @@ Other valid commands
 - `LEFT` rotates the robot 90 degrees to the left. Robot's position doesn't change.
 - `RIGHT` rotates the robot 90 degrees to the right. Robot's position doesn't change.
 - `REPORT` return `X,Y,F` of the robot. E.g. `Output: 1,1,SOUTH`
-
 
 ## Simulation Constraints
 - The toy robot is moving on a square tabletop of dimensions 5 units x 5 units.
@@ -36,21 +50,6 @@ Code quality is attempted using [RSpec](http://rspec.info/) for testing
 
 Run tests:
 `$ rspec`
-
-## Troubleshooting
-### Dependancies
-`ruby version ~> 2.1.0p0`
-
-To check your version run:
-`$ ruby -v`
-
-To learn how to install ruby visit ruby-lang.org/en/installation/
-
-### Development environment
-- Windows 8.1, ruby 2.2.4p230
-
-### Development dependancies
-`rspec ~> 3.0`
 
 ## Discussion
 As a new developer, the robot test was more challlenging than expected. I've learnt to utilise Test Driven Development, OOP patterns, write better README and cleaner code. I'm not happy with the robot class. Currently there is a lot of unnecessary complexity in the code due to the amount of nested conditional logic. Will work on this.
