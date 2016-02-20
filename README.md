@@ -27,14 +27,17 @@ Code quality is attempted using [RSpec](http://rspec.info/) for testing
 Run tests:
 `$ rspec`
 
-## Dependancies
+## Troubleshooting
+### Dependancies
 ruby version ~> 2.1.0p0
+
 To check your version run:
 `$ ruby -v`
+
 To learn how to install ruby visit ruby-lang.org/en/installation/
 
-## Development environment:
+### Development environment
 - Windows 8.1, ruby 2.2.4p230
 
-## Development dependancies:
+### Development dependancies
 `rspec ~> 3.0`
