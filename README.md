@@ -21,6 +21,16 @@ Other valid commands
 - `RIGHT` rotates the robot 90 degrees to the right. Robot's position doesn't change.
 - `REPORT` return `X,Y,F` of the robot. E.g. `Output: 1,1,SOUTH`
 
+
+## Simulation Constraints
+- The toy robot is moving on a square tabletop of dimensions 5 units x 5 units.
+- There are no other obstructions on the table surface.
+- The robot is free to roam around the surface of the table, but is prevented from falling to destruction.
+- Any movement that would result in the robot falling from the table is prevented, however further valid movement commands are still allowed.
+- The first valid command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command. The application discards all commands in the sequence until a valid PLACE command has been executed.
+- A robot that is not on the table ignores the MOVE, LEFT, RIGHT and REPORT commands.
+- The application does not provide any graphical output showing the movement of the toy robot.
+
 ## Testing
 Code quality is attempted using [RSpec](http://rspec.info/) for testing
 
@@ -29,7 +39,7 @@ Run tests:
 
 ## Troubleshooting
 ### Dependancies
-ruby version ~> 2.1.0p0
+`ruby version ~> 2.1.0p0`
 
 To check your version run:
 `$ ruby -v`
