@@ -51,3 +51,6 @@ To learn how to install ruby visit ruby-lang.org/en/installation/
 
 ### Development dependancies
 `rspec ~> 3.0`
+
+## Discussion
+As a new developer, the robot test was more challlenging than expected. I've learnt to utilise Test Driven Development, OOP patterns, write better README and cleaner code. I'm not happy with the robot class. Currently there is a lot of unnecessary complexity in the code due to the amount of nested conditional logic. Will work on this.
